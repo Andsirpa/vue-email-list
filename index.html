@@ -29,9 +29,12 @@
     <div id="app">
         <div class="container">
             <h1>{{title}}</h1>
-            <ul>
-                <li v-for='mail in mailList'>{{mail}}</li>
-            </ul>
+            <div v-show="mailList.lenght == requiredEmails">
+                <ul>
+                    <li v-for="mail in mailList">{{mail}}</li>
+                </ul>
+
+            </div>
 
         </div>
 
