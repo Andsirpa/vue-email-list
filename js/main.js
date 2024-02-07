@@ -13,10 +13,14 @@ const app = createApp({
     methods: {},
 
     mounted() {
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((response) => {
-            const mail = response.data.response;
-            this.mailList.push(mail);
-        })
+        // uso un for per generare più mail
+        for (let i = 0; i < this.requiredMails; i++) {
+
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((response) => {
+                const mail = response.data.response;
+                this.mailList.push(mail);
+            });
+        }
     },
 
 });
