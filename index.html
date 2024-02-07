@@ -28,8 +28,11 @@
 <body>
     <div id="app">
         <div class="container">
-            <h1 class="my-5">Titolo</h1>
-            <code class="fs-3" id="result">Esempio</code>
+            <h1>{{title}}</h1>
+            <ul>
+                <li v-for='mail in mailList'>{{mail}}</li>
+            </ul>
+
         </div>
 
     </div>
